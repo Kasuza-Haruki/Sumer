@@ -28,7 +28,7 @@ C:\Users\<you>\.claude\skills\Sumer\
 
 ## 使用
 
-在 Claude Code 输入 `/Sumer` 调用。技能设置了 `disable-model-invocation: true`，只能由用户手动触发，模型不会自动调用。
+技能会由 agent 按描述自动加载，也可以手动输入 `/Sumer` 调用。收到 `[dispatch:` 开头的派活消息时，前端 agent 会按执行方规则加载本 skill。
 
 ## 结构
 

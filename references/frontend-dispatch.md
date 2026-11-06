@@ -39,7 +39,7 @@ claude
 验收：...
 非目标：...
 契约：<涉及接口时给路径、入参、响应字段、错误格式>
-必读：AGENTS.md；docs/ 设计规范与本任务相关文档
+必读：先加载 Sumer skill，按执行方规则执行；AGENTS.md；docs/ 设计规范与本任务相关文档
 约束：复用现有组件和 Token；规范不确定时提问，不自行加样式；不改无关文件；不 commit/push；Review 由指挥方统一做
 回报：以 [fe-report] 开头，给分支、改动文件、git diff --stat、验证命令与结果、阻塞
 ```

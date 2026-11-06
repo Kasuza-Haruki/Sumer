@@ -1,7 +1,6 @@
 ---
 name: Sumer
-description: 在前后端配对的开发工作树中做需求、修 bug、联调时使用。只要任务可能涉及前端改动、需要把前端活派给同分支的前端工作树会话、用户提到 agentteam / 并行 / 分派 / handoff、要做 review，或要用 ego-lite 做端到端点击测试，就先读本 skill。纯问答、只读排查、状态查询不要用。
-disable-model-invocation: true
+description: 在前后端配对的开发工作树中做需求、修 bug、联调时使用。收到 `[dispatch:` 消息，或任务可能涉及前端改动、需要把前端活派给同分支的前端工作树会话、用户提到 agentteam / 并行 / 分派 / handoff、要做 review，或要用 ego-lite 做端到端点击测试，就先读本 skill。纯问答、只读排查、状态查询不要用。
 ---
 
 # 开发分派

@@ -61,4 +61,4 @@ description: 在前后端配对的开发工作树中做需求、修 bug、联调
 
 ## 6. 交付
 
-后端改动、前端改动（来自 `[fe-report]`）、review 的 P0、E2E 结果、未验证项、阻塞。`CHANGELOG.md` 和 `MEMORY.md` 按后端 `AGENTS.md` 的触发条件询问。
+读 `references/report.md`，按固定模板汇报。必须保留 review 的原始问题清单，逐条标状态；修复后也不能删掉原问题，不能只写“P0 已修复”。`CHANGELOG.md` 和 `MEMORY.md` 按后端 `AGENTS.md` 的触发条件询问。

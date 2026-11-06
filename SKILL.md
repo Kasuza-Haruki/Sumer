@@ -54,7 +54,7 @@ disable-model-invocation: true
 
 ## 4. Review
 
-读 `references/review.md`，spawn 独立只读 subagent。指挥方审改动涉及的工作树；纯前端任务审自己的 diff，不能跳过。只报 P0、只修 P0、只跑一轮；P1+ 只报告。
+读 `references/review.md`，spawn 独立只读 subagent。指挥方审改动涉及的工作树；有前端改动就必须做前端 review；纯前端任务审自己的 diff，不能跳过。违反 `AGENTS.md` / `docs/` 明确约束也算 P0。只报 P0、只修 P0、只跑一轮；P1+ 只报告。
 
 ## 5. E2E
 

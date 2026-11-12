@@ -24,6 +24,18 @@
       "prompt": "我现在在前端工作树（有 package.json 和 vite 配置）里，分支 feature/list-filter。列表页刚加了筛选和分页，代码已经改完，工作区有未提交的 diff，还没有 commit。直接按流程继续，不要真的 spawn、不要真的启动服务，只输出下一步计划和要执行的命令。",
       "expected_output": "判定为前端执行方；纯前端任务也安排独立只读 review 审自己的 diff；不向其他会话分派；内化的设计约束；E2E 固定端口，同分支服务已跑时直接复用，否则先请求授权。",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "你是后端工作树会话，分支 release/2026-11，要派前端加导出按钮。机器上有多个活跃会话，你不知道哪一个是同分支前端工作树。只输出定位步骤和要发的第一条消息，不要真的调用 SendMessage，不要改文件。",
+      "expected_output": "先合并 ListAgents 活跃 name 与 ~/.claude/sessions 的 cwd；校验 package.json + 前端构建配置和同分支；只向唯一命中的会话发消息；无命中时问用户，不群发。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "按流程做 E2E。后端 18001、前端 15173 已按 e2e 配置启动，当前分支 feature/export。只输出点击测试前 ego-browser 的准备步骤和命令，不要真的启动浏览器。",
+      "expected_output": "用当前分支名命名任务空间；打开 127.0.0.1:15173 的需求页面；说明 Page 标签固定为 p1/p2。",
+      "files": []
     }
   ]
 }

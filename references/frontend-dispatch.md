@@ -6,9 +6,15 @@
 
 ## 找会话与握手
 
-`ListAgents` 列候选，不群发、不按名字猜；拿不到时问用户，不自己改前端。
+先本地定位，不发消息：
 
-只向候选发只读握手：
+1. `ListAgents` 取活跃 name。
+2. 读 `~/.claude/sessions/*.json`，只保留 name 在活跃列表里的项，得到 `cwd`。
+3. 对每个 `cwd` 只读检查：有 `package.json` 和前端构建配置，且 `git -C <cwd> branch --show-current` 等于后端分支。
+4. 唯一命中就用它的 name 发握手；多个命中选目录名与后端工作树相同的；同一 `cwd` 有多个会话优先 idle；仍不唯一就问用户一次。
+5. 没有命中就问用户前端工作树或会话名。不群发、不按名字猜；`~/.claude/sessions` 不存在时让用户指定会话名。
+
+只向命中的会话发只读握手：
 
 ```
 [dispatch:handshake] 不要改任何文件。用 SendMessage 回复给本消息的发送方，消息以 [dispatch:handshake-reply] 开头，正文只含三行：
